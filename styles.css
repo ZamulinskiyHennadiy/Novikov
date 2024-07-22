@@ -1,0 +1,351 @@
+:root {
+    --max-width: 970px;
+    --header-height: 80px;
+    --font-family: 'Open Sans', sans-serif;
+    --font-size: 18px;
+
+    /* space */
+    --element-button: 50px;
+    --title-button: 30px;
+    --paragraph-button: 25px;
+    --gap: 20px;
+    --padding: 10px;
+    --container-button: 50px;
+
+    /* color */
+    --main-text-color: rgba(130, 130, 130, 1);
+    --main-text-color-hover: rgba(7, 7, 7, 1);
+    --main-background-color: rgba(255, 255, 255, .8);
+
+    /* other */
+    --transition: all 0.3s ease;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    /* outline: 1px solid red; */
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    margin-bottom: var(--paragraph-button);
+    text-align: center;
+    width: 100%;
+    text-shadow: 1px 1px 1px var(--main-text-color-hover);
+}
+
+h3 {
+    font-size: 35px;
+    font-weight: 700;
+    line-height: 46.3px;
+}
+
+h1 {
+    text-align: start;
+    font-size: 48px;
+    font-weight: 700;
+    line-height: 65.37px;
+    text-align:left
+}
+
+p {
+    max-width: 480px;
+    width: 100%;
+    font-weight: 400px;
+    line-height: 24px;
+    max-width: 500px;
+    margin-bottom: var(--paragraph-button);
+    text-align: center;
+}
+
+a,
+button {
+    user-select: none;
+}
+
+
+body {
+    margin: 0;
+    padding: 0;
+    position: relative;
+    /* wtf remember this */
+    max-width: 100vw;
+    min-height: 100vh;
+    background-color: var(--main-background-color);
+    font-family: var(--font-family);
+    font-size: var(--font-size);
+    color: var(--main-color);
+}
+
+/* header */
+.hero {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: var(--container-button);
+}
+.header {
+    width: 100%;
+    height: var(--header-height);
+    background-color: var(--main-background-color);
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 100;
+}
+
+.header nav {
+    max-width: var(--max-width);
+    width: 100%;
+    margin: 0 auto;
+    height: 100%;
+    border-bottom: 1px solid var(--main-text-color);
+}
+
+.header ul {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    list-style: none;
+    gap: var(--gap);
+}
+
+.header a {
+    text-decoration: none;
+    color: var(--main-text-color);
+    transition: var(--transition);
+    line-height: 24px;
+    letter-spacing: 2%;
+    font-weight: 400;
+    padding: var(--padding);
+    white-space: nowrap;
+}
+
+.header a:hover {
+    color: var(--main-text-color-hover);
+}
+
+img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.main {
+    width: 1000px;
+    height: auto;
+    max-width: var(--max-width);
+    padding-top: var(--header-height);
+    margin: auto;
+}
+
+.about {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: var(--container-button);
+}
+
+.about img {
+    width: 400%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+    margin-bottom: var(--container-button)
+}
+
+.about p:last-of-type {
+    margin-bottom: 0;
+}
+
+/* skills */
+.skills {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: var(--container-button)
+}
+
+.list-skills {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: var(--gap);
+    list-style: none;
+}
+
+.list-skills li {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    gap: var(--gap);
+    list-style: decimal;
+}
+
+.list-skills figure {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: var(--gap);
+    list-style: none;
+}
+
+.list-skills figcaption {
+    color: var(--main-text-color);
+    max-width: 90px;
+    font-family: Open Sans;
+    font-size: 14px;
+    font-weight: 700;
+    line-height: 19.07px;
+    letter-spacing: 0.02em;
+    text-align: center;
+}
+
+.list-skills div {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.list-skills div img {
+    width: 26px;
+    height: 26px;
+    object-fit: cover;
+    object-position: center;
+    filter: drop-shadow(1px 1px 1px var(--main-text-color-hover))
+}
+
+/* portfolio */
+.portfolio {
+    width: 100%;
+    margin-bottom: var(--container-button);
+}
+
+.portfolio ul {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: var(--gap);
+    list-style: none;
+}
+
+.portfolio figure {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: var(--gap);
+    list-style: none;
+}
+
+.portfolio img {
+    width: 100%;
+    height: 500%;
+    object-fit: cover;
+    object-position: center;
+}
+
+.portfolio a {
+    text-decoration: none;
+    white-space: nowrap;
+}
+
+.portfolio a:hover {
+    color: var(--main-text-color-hover);
+}
+
+/* footer */
+footer {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+footer button {
+    min-width: 180px;
+    height: 44px;
+    padding: 0px 16px 0px 16px;
+    border-radius: 22px;
+    opacity: 0px;
+    background: var(--main-text-color-hover);
+    color: var(--main-text-color);
+    font-size: 18px;
+    font-weight: 700;
+    line-height: 24.51px;
+    letter-spacing: 0.1em;
+    text-align: center;
+    transition: var(--transition);
+    cursor: pointer;
+    margin-bottom: var(--element-button);
+    border: none;
+}
+
+footer button:hover {
+    background: var(--main-text-color);
+    color: var(--main-background-color);
+    transform: scale(1.2);
+}
+
+footer ul {
+    width: 100%;
+    max-width: 300px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    gap: var(--gap);
+    list-style: none;
+    margin-bottom: var(--element-button);
+}
+
+footer ul img {
+    background: inherit;
+    transition: var(--transition);
+    cursor: pointer;
+    width: 40px;
+    height: 40px;
+    object-fit: cover;
+    object-position: center;
+}
+
+footer ul img:hover {
+    transform: scale(1.2);
+}
+
+footer p {
+    color: var(--main-text-color);
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 19.07px;
+    text-align: center;
+    margin-bottom: var(--element-button);
+}
+
+footer span {
+    display: block;
+}
