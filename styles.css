@@ -186,6 +186,7 @@ img{
     flex-wrap: wrap;
     gap: var(--gap);
     list-style: none;
+    padding: 20px;
 }
 
 .list-skills li {
@@ -198,7 +199,6 @@ img{
 }
 
 .list-skills figure {
-    width: 100%;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -219,7 +219,6 @@ img{
 }
 
 .list-skills div {
-    width: 100%;
     display: flex;
     flex-direction: row;
     align-items: center;
